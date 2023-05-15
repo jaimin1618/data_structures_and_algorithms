@@ -1,0 +1,17 @@
+DP is most important concept for CP and Coding interviews, 
+High package company will definately include DP question in
+hard/Medium category. DP has most parent questions against all
+other algorithmic techniques. 
+
+Here are DP parent problems, go through problems in order: 
+
+1) 0-1 KnapSack (6)
+2) Unbounded KnapSack (5)
+3) Fibonacci (7)
+4) LCS (15)
+5) LIS (10)
+6) Kadane's algorithm (6)
+7) Matrix chain multiplication-MCM (7)
+8) DP on trees (4)
+9) DP on grid (14)
+10) Others (5)

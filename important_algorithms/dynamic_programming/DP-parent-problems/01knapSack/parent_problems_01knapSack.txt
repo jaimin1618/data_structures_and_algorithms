@@ -1,0 +1,6 @@
+subset sum
+equal sum partition
+count subset sum
+minimum subset sum diff (IMPORTANT***, to understand all above)
+target sum
+number of subsets of given diff

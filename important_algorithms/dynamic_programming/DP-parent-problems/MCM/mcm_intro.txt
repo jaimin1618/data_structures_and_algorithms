@@ -1,0 +1,9 @@
+Problems in MCM
+
+1) MCM => Recursive, Memoized (iterative makes confusion here)
+2) Printing MCM
+3) Evaluate expression to true or boolean parenthesis
+4) min/max of expression
+5) palindrome partitioning
+6) Scramble string 
+7) Egg droping problem

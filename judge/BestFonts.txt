@@ -1,0 +1,23 @@
+Current best fonts I use: 
+
+BEST FONT AWARD: Lekton Regular/Bold
+
+0) Noto Mono Bold, Oxygen Mono bold, Roboto Mono bold, IBM Plex Mono Bold
+0) Larabie font free bold
+0) Monoid bold
+1) Menlo Bold, Normal
+2) Monaco Bold, Normal
+3) Inconsolata Bold
+3) ManhattanTransfer bold
+4) MonospaceTypewriter Regular
+3) Hack Bold, , 
+4) Liberation Mono bold, Monospace Bold
+4) JetBrains Mono bold & Extrabold
+4) Bit Stream Sans Mono bold
+5) FogoMonoWeb3 Bold
+6) Share Tech Mono Bold, SmallTypeWriting Bold/Medium, CamingoCode Bold
+7) SF Mono bold
+7) Dejavu Sans Mono bold
+8) Anonymous Pro Minus Bold
+9) Cousine regular/bold
+10) Unispace Bold/Regular

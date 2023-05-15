@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+#include<bits/stdc++.h>
+#define mem(x,val) memset((x),(val),sizeof(x))
+#define all(x) x.begin(),x.end()
+#define rep(i,a,b) for(int i = a; i < b; ++i)
+#define trav(a, x) for(auto& a: x)
+#define sz(v) (int)(v).size()
+#define len(s) (int)(s).length()
+#define DEBUG(x) cout << '>' << #x << ':' << x << endl
+#define PRINT(v) trav(el, (v)) cout << el << ' '
+#define MASK(k) ((unsigned char)(1 << k))
+#define DONE(ans) cout << ans << '\n'
+#define inf INFINITY
+using namespace std;
+using ll = long long int;
+using ull = unsigned long long int;
+using vi = vector<int>;
+using vii = vector<vi>;
+const double EPS = 1e-7;
+const double PI = acos(-1);
+const ll mod = 1e9+7;
+
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+
+	return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,17 @@
+Length of LCS 
+Longest common subsequence
+Longest common substring
+Print LC subsequence
+Shortest common supersequence 
+Print SCS
+Min # of insertion & deletion for converting string A => B
+Longest repeating subsequence
+Length of longest subsequence of A which is a substring in B
+Subsequence pattern matching
+Count how many times A appears as subsequence in B
+
+Longest palindromic subsequence
+Longest palindromic substring
+Count of palindromic substring
+Min # of deletion to make string a palindrome 
+Min # of insertion to make a string a palindrome
