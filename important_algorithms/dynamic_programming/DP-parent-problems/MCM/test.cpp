@@ -1,9 +1,14 @@
 #include<bits/stdc++.h>
+using namespace std;
 
 int main() {
-	std::string s = "Jaimin";
-	std::cout << s.length() << '\n';
-	std::cout << s.size() << '\n';
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	unordered_map<int,int> mp;
+
+	if(mp[1]) {
+		cout << "Not found" << '\n';
+	}
 
 	return 0;
 }

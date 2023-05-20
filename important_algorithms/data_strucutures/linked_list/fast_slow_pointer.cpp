@@ -28,9 +28,54 @@ ListNode *getMiddleNode(ListNode *root) {
 	fast = root;
 	slow = root;
 
+	// fast != NULL is same as fast
 	while(fast && fast->next) {
 		fast = fast->next->next;
 		slow = slow->next;
+	}
+
+	return slow;
+}
+
+bool isCycleInList(ListNode *root) {
+	ListNode *fast = NULL, *slow = NULL;
+	fast = root;
+	slow = root;
+
+	while(fast && fast->next) {
+		fast = fast->next->next;
+		slow = slow->next;
+
+		if(slow == fast) 
+			return true;
+	}
+
+	return false;
+}
+
+ListNode *getCycleHeadInList(ListNode *root) {
+	ListNode *fast = NULL, *slow = NULL;
+	fast = root;
+	slow = root;
+	bool isCycleFound = false;
+
+	while(fast && fast->next) {
+		fast = fast->next->next;
+		slow = slow->next;
+
+		if(slow == fast) {
+			isCycleFound = true;
+			break;
+		} 
+	}
+
+	if(!isCycleFound) 
+		return NULL;
+
+	ListNode *slow2 = root;
+	while(slow != slow2) {
+		slow = slow->next;
+		slow2 = slow2->next;
 	}
 
 	return slow;

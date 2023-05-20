@@ -1,20 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void iterateMap(unordered_map<string, int>& mp) {
-	for(const auto& [k, v]: mp) 
-		cout << k << ' ' << v << '\n';
-}
+struct Trie {
+	struct TrieNode {
+		unordered_map<char, TrieNode*> children;
+		bool isLastWord = false;
+	};
+
+	TrieNode *root = NULL;
+
+	Trie() {
+		root = new TrieNode();
+	}
+
+	void insert() {};
+	bool search() const {};
+	bool startsWith() const {};
+};
+
 
 int main() {
-	unordered_map<string, int> mp;
-
-	mp["JAIMN"] = 100;
-	mp["JANE"] = 103;
-	mp["JOHN"] = 302;
-
-	iterateMap(mp);
-
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
 
 	return 0;
 }
