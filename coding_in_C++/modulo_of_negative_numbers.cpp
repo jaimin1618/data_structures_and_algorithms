@@ -9,7 +9,8 @@ int main() {
     int MOD = 8;
 
     cout << (x - 1 % 8) << '\n';
-    cout << (x + MOD - 1 % MOD) << '\n';
+    // IMPORTANT: DO NOT FORGOT "(" ")" when doing modulo of negative numbers
+    cout << ((x + MOD - 1) % MOD) << '\n';
     
 
     return 0;
