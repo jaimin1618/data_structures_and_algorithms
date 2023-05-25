@@ -43,7 +43,8 @@ int getMin(vector<int>& v) {
 			R = mid - 1;
 	}
 
-	return 0;
+	// note: return 0 doesn't handle edge case
+	return min(v[0], v[n - 1]);
 }
 
 // main function to find element in rotated array using BS
