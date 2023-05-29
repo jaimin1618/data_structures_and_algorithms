@@ -79,5 +79,10 @@ int main() {
 		cout << el << ' ';
 	cout << '\n';
 
+	vector<int> t {4, 5, 2, 10, 8};
+	for(auto el: previousSmallerElement(t))
+		cout << el << ' ';
+	cout << '\n';
+
 	return 0;
 }
