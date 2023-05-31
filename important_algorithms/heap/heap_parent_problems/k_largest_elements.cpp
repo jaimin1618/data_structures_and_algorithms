@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<int> k_largest_elements(vector<int>& arr, int k) {
-	priority_queue<int,vector<int>,greater<int>> minHeap;
+	priority_queue<int, vector<int>, greater<int>> minHeap;
 
 	for(int& el: arr) {
 		minHeap.push(el);

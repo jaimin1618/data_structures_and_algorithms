@@ -8,7 +8,6 @@ using namespace std;
 
 double get_median(vector<int>& v) {
 	
-
 	return 0;
 }
 

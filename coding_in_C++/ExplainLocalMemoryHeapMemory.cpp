@@ -19,14 +19,16 @@ int main() {
 	for(int i = 0; i < 3; ++i) 
 		cout << v[i] << ' ';
 	cout << '\n';
+	cout << "Above stack allocation will print garbage due to deallocation of memory after function execution" << '\n';
+
 
 	heapAllocation();
 	cout << "(Heap allocation) Array Size: " << N << '\n';
 	for(int i = 0; i < 3; ++i) 
 		cout << v[i] << ' ';
 
-
-
+	// finally, we have to deallocate this heap memory pointed by variable v
+	delete v;
 
 	return 0;
 }

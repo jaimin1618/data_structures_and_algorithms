@@ -6,12 +6,29 @@ using pi = pair<int,int>;
 vector<int> KMostFrequentNumbers(vector<int>& v, int k) {
 	vector<int> result;
 	// key is frequency
-	priority_queue<pi,vector<pi>,greater<pi>> minH;
-	unordered_map<int,int> mp;
+	priority_queue<pi, vector<pi>, greater<pi>> minH;
+	unordered_map<int, int> mp;
 
 	// element => frequency mapping
 	for(auto& el: v) 
 		mp[el]++;
+
+	/**
+	 * First why we think this is Heap problem?
+	 * the reason for that is, "K most frequent elements => similar to K largest/smallest elements pattern of Heap problems" 
+	 * 
+	 * Once we find, 
+	 * element => frequency MAP
+	 * 1 => 3
+	 * 3 => 1
+	 * 2 => 2
+	 * 4 => 1
+	 * 
+	 * We need to put frequence into priority, and run minHeap
+	 * because we want to remove low frequency elements
+	 * 
+	 * DONE...
+	 * */
 
 	for(auto& el: mp) {
 		pi p = make_pair(el.second, el.first);

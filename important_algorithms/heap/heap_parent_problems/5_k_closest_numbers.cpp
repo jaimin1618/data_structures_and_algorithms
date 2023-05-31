@@ -15,6 +15,24 @@ void printv(vector<int>& v) {
 vector<int> k_closest_numbers(vector<int>& v, int number, int k) {
 	const int n = (int) v.size();
 	priority_queue<pair<int,int>> q; // max-Heap
+	/**
+	 * Why maxHeap?
+	 * 
+	 * here we want to find K closest elements to given number
+	 * So, we do that getting diff with that number. 
+	 * 
+	 * [5, 6, 7, 8, 9], number = 7
+	 * diff = [2, 1, 0, 1, 2]
+	 * 
+	 * now we want to remove high diff elements, so we want to put
+	 * higher diff elements on top and remove if size > k
+	 * 
+	 * NOTE: 
+	 * priority_queue<pair<int,int>> q;
+	 * this data structure prioritize p.first element for sorting (putting it on top)
+	 * we store number (element itself) in p.second so that we can retrieve when needed
+	 * 
+	 */
 
 	for(int i = 0; i < n; ++i) {
 		int diff = abs(v[i] - number);

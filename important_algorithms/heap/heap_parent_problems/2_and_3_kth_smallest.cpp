@@ -8,6 +8,7 @@ using namespace std;
 
 int kth_smallest(int v[], int n, int k) {
 	priority_queue<int> maxH;
+	// kth "smallest" => "max" heap
 
 	for(int i = 0; i < n; ++i) {
 		maxH.push(v[i]);
@@ -20,6 +21,7 @@ int kth_smallest(int v[], int n, int k) {
 }
 
 int kth_largest(int v[], int n, int k) {
+	// kth "largrest" => "min" heap
 	priority_queue<int,vector<int>,greater<int>> minH;
 
 	for(int j = 0; j < n; ++j) {

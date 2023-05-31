@@ -3,7 +3,9 @@ using namespace std;
 
 /**
  * Most important question for Heap
+ * Sort nearly sorted array, asked in F2F@flipkart
  */
+
 void sortKSortedArray(vector<int>& v, int k) {
 	priority_queue<int,vector<int>,greater<int>> minHeap;
 	vector<int> sorted_v;
@@ -31,8 +33,6 @@ int main() {
 	sortKSortedArray(v, k);
 	for(int& el: v)
 		cout << el << ' ';
-
-
 
 	return 0;
 }
