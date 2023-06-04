@@ -37,8 +37,7 @@ struct Program {
 	static long dp[MAXN][MAXR];
 	static long nCr(int n, int r) {
 		if(r == 1)
-			return n;
-		
+			return n;	
 			
 		if(dp[n][r] != 0)
 			return dp[n][r]; 

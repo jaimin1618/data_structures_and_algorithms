@@ -55,6 +55,7 @@ int main() {
 			std::fill(std::begin(row), std::end(row), 13);
 		}
 	);
+	
 	for(auto& r: mat) {
 		for(auto& c: r) {
 			std::cout << c << ' ';
