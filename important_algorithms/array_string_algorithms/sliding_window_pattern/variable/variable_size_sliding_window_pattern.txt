@@ -1,0 +1,60 @@
+Core difference between fix sized and variable size sliding window: 
+
+Fix Size:
+	- In fix sized sliding window you will be given K (window size)
+	- And you will have to minimize or maximize condition sum, max element, min element
+	  in that window size only. 
+
+Variable Size: 
+	- In variable sized sliding window you will be given condition (lets say sum)
+	- And you will have to find window size (or min/max window size) such that that sum occurs
+
+
+in Fix size sliding window: given (size of sliding window) => get (Fulfill condition in given size sliding window)
+in Variable size sliding window: given (condition or to min/max it) => get (Size of sliding window)
+
+Fixed size sliding window solution have this patterns
+i = 0, j = 0
+
+while(j < n) {
+	== calculation ==
+	like. 
+	sum += v[j];
+	=== ===
+	
+	if(j - i + 1 < k) {
+		// perform calculation till current window size < window size
+		++j;
+	} else if(j - i + 1 == k) {
+		// when current window size == window size
+		ans <- get from calculation
+		remove effects of v[i] or any calculation that we did earlier
+
+		++i // to slide the window
+		++j // to increase window size
+	}
+
+}
+
+Variable sized sliding window (General format):
+target condition (k)
+
+while(j < n) {
+	== calculation ==
+	like. 
+	sum += v[j];
+	=== ===
+
+	if(condition < k)
+		++j;
+	
+	else if(condition == k)
+		ans <- calculation
+		++j;
+
+	else if(condition > k)
+		while(condition > k)
+			remove calculations, slide the window (++i)
+			++i;
+		++j;
+}
