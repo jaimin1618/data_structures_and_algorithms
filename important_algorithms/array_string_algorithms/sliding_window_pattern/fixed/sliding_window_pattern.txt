@@ -1,0 +1,23 @@
+Sliding window solution have this patterns
+
+i = 0, j = 0
+
+while(j < n) {
+	== calculation ==
+	like. 
+	sum += v[j];
+	=== ===
+	
+	if(j - i + 1 < k) {
+		// perform calculation till current window size < window size
+		++j;
+	} else if(j - i + 1 == k) {
+		// when current window size == window size
+		ans <- get from calculation
+		remove effects of v[i] or any calculation that we did earlier
+
+		++i // to slide the window
+		++j // to increase window size
+	}
+
+}

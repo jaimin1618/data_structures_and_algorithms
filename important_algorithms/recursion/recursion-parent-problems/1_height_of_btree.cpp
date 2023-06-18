@@ -32,10 +32,13 @@ void postorder(Node *root) {
 // === x ===
 
 int treeHeight(Node *root) {
-	if(root == nullptr) return 0;
-	int lh = treeHeight(root->left);
-	int rh = treeHeight(root->right);
-	return 1 + max(lh, rh);
+	if(root == nullptr) 
+		return 0;
+	
+	int leftHeight = treeHeight(root->left);
+	int rightHeight = treeHeight(root->right);
+
+	return 1 + max(leftHeight, rightHeight);
 }
 
 int main() {

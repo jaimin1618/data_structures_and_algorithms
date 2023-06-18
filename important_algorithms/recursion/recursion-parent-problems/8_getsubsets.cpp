@@ -1,11 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+vector<string> ss; // results
+void get_subsets(string ip, string op) {
+	if(ip.size() == 0) {
+		ss.push_back(op);
+		return;
+	}
+
+	string op1 = op; // include
+	string op2 = op; // exclude
+	op1.push_back(ip[0]);
+
+	// make input smaller
+	ip.erase(ip.begin());
+	get_subsets(ip, op1);
+	get_subsets(ip, op2);
+}
+
 int main() {
-	string str = "abc";
-	set<string> s = subsets(str);
-	
-	
+	string ip = "abc";
+	string op = "";	
+	get_subsets(ip, op);
+
+	for(auto& el: ss) {
+		if(el.size() == 0) 
+			cout << "\'\'";
+		else 
+			cout << el;
+		cout << ' ';
+	}
 
 	return 0;
 }
