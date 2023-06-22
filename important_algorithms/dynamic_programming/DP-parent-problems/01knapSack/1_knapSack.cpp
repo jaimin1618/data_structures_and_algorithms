@@ -7,7 +7,7 @@ int knapSack(int wt[], int v[], int W, int n) {
 		return 0;
 
 	if(wt[n - 1] <= W)
-		return max(
+		return max(  
 			v[n - 1] + knapSack(wt, v, W - wt[n - 1], n - 1), 
 			knapSack(wt, v, W, n - 1)
 		);

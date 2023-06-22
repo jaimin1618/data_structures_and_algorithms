@@ -1,0 +1,60 @@
+DP problems can be identified based on following requirements.
+
+1. Recursion
+2. Choices, (You will need to make choice, or consider choices for getting optimal solution)
+2. Given to find Optimal solution (Min, Max, Largest, Smallest)
+
+If problems is recursion based, consider implementing DP. and where DP works?
+it works to optimize the solution using Cache / Mem (DP Table)
+
+Generally, DP won't be needed for Single recursive calls and similar questions. but you can consider DP solution when 2 or more recursive calls are needed. 
+
+function f(n) {
+	f(n - 1)
+	f(n - 2)
+}
+
+ALWAYS REMEMBER this below diagram
+Recursion (Parent) 
+		|
+		V
+  	DP (Child)
+
+template / diagram of Recursive function
+outputType solution(intputs...) {
+	|----------------|
+	| Base condition | 
+    |----------------|
+    |----------------|
+	| Choice diagram | 
+    |----------------|
+}
+
+example
+int knapSack(int wt[], int v[], int W, int n) {
+	|----------------|
+	| Base condition | 
+    |----------------|
+    |----------------|
+	| Choice diagram | 
+    |----------------|	
+}
+
+***
+IMPORTANT THINGS TO KEEP IN MIND FOR DP SOLUTIONS
+***
+- Just like recursion, think of making your input smaller (or make a decision that leads to smaller input size). 
+- This strategy will help you to design code solution. 
+- And for Base conditions, think of smallest valid inputs for your functions. if more cases of smallest valid inputs then you will have many if...{} in base condition
+
+
+***
+IMPORTANT THINGS WHEN WRITING DP SOLUTION
+***
+- When you have found recursive and memoized solution for your problem. You start writing TOP-DOWN solution. 
+- Why initialization, initialization is required. Because, 
+	Base condition in Recursive function are converted to Initialization in Top-Down approach
+- How to write TOP-DOWN Solution
+	STEP 1: Initialization
+	STEP 2: Converting recursive calls (n, W) => Iterative (i, j)
+	STEP 3: 
