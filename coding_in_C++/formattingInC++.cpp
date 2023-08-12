@@ -15,7 +15,7 @@ int main() {
 	cout << x << '\b';
 
 	// C++20	
-	cout << std::format("{:05d}", x);	
+	// cout << std::format("{:05d}", x);	
 	
 	return 0;
 }

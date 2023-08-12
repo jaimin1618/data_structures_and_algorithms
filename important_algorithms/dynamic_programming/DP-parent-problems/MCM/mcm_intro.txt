@@ -7,3 +7,8 @@ Problems in MCM
 5) palindrome partitioning
 6) Scramble string 
 7) Egg droping problem
+
+more info: 
+
+- in general, use Recursive and memoization method to solve MCM problems, iterative methods and solution are complex and hard to understand and decode. Go with Memoization. 
+- To understand MCM format and question pattern, focus on understanding MCM (1) and Evaluate expression problem. 

@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
-public class Program {
+class Program {
 	public static void main(String[] args) {
-		System.out.println("Jaimin Chokhawala");
+
+	}
+	
+	public boolean isPrime(int number) {
+		for(int i = 2; i <= Math.sqrt(number); ++i) 
+			if(number % i == 0) 
+				return false;
+
+		return true;
 	}
 }
