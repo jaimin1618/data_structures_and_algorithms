@@ -1,0 +1,38 @@
+Parent problems of DP on trees
+
+1. Diameter of binary Tree
+
+Identification and Syntax of problem
+
+Syntax of recursive function, for DP on trees
+
+int function(--- IP ---) 
+{
+	|----------------|
+	| BASE CONDITION |
+	|----------------|
+	|----------------|
+	|   HYPOTHESIS   |
+	|----------------|
+	|----------------|
+	| 	 INDUCTION	 |
+	|----------------|
+}
+
+General Syntax more precisely for DP on trees problems
+
+int solve(Node *root, int& result) 
+{
+	if(root == nullptr)
+		return 0;
+
+	// HYPOTHESIS - Get answer from Left-Sub-Tree and Right-Sub-Tree
+	int left = solve(root->left, result);
+	int right = solve(root->right, result);
+
+	// INDUCTION - Merge answer from LST and RST on current node
+	int tmp = "calculate temporary answer" | 1 + max(L, R)
+	int ans = max(tmp, relation)
+	result = max(result, ans) // update the final answer
+	return tmp
+}

@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
+using namespace std;
 
-bool is_palindrome(const std::string& s, int i, int j) {
+bool is_palindrome(const string& s, int i, int j) {
 	if(i >= j)
 		return true;
 	while(i < j) {
@@ -14,7 +15,7 @@ bool is_palindrome(const std::string& s, int i, int j) {
 }
 
 int dp[1000 + 1][1000 + 1];
-int solve(const std::string& s, int i, int j) {
+int solve(const string& s, int i, int j) {
 	if(dp[i][j] != -1) 
 		return dp[i][j];
 	if(i >= j || is_palindrome(s, i, j))
@@ -22,21 +23,34 @@ int solve(const std::string& s, int i, int j) {
 
 	int mini = INT_MAX;
 	for(int k = i; k < j; ++k) {
-		int s1 = dp[i][k] != -1 ? dp[i][k] : solve(s, i, k);
-		int s2 = dp[k + 1][j] != -1 ? dp[k + 1][j] : solve(s, k + 1, j);
-		int tmp = 1 + s1 + s2;
+		int left, right;	
 
-		mini = std::min(tmp, mini);
+		if(dp[i][k] != -1) {
+			left = dp[i][k];  
+		} else{
+			left = solve(s, i, k);
+			dp[i][k] = left;
+		}
+
+		if(dp[k + 1][j] != -1) {
+			right = dp[k + 1][j];
+		} else {
+			right = solve(s, k + 1, j);
+			dp[k + 1][j] = right;
+		}
+
+		int tmp = 1 + left + right;
+		mini = min(tmp, mini);
 	}
 
 	return dp[i][j] = mini;
 }
 
 int main() {
-	std::string s = "jaimin";
+	string s = "jaimin";
 	memset(dp, -1, sizeof(dp));
 	int result = solve(s, 0, s.length() - 1);
-	std::cout << result << '\n';
+	cout << result << '\n';
 
 	return 0;
 }

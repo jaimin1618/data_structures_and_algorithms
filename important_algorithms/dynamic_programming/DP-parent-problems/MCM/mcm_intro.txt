@@ -12,3 +12,9 @@ more info:
 
 - in general, use Recursive and memoization method to solve MCM problems, iterative methods and solution are complex and hard to understand and decode. Go with Memoization. 
 - To understand MCM format and question pattern, focus on understanding MCM (1) and Evaluate expression problem. 
+
+STEPS to solve MCM problem: 
+1. Define function and define endpoints i and j (be careful with this!)
+2. Find right BASE CONDITIONS
+3. Move k -> i to j loop Scheme
+4. Calculate answer from temporary answer
